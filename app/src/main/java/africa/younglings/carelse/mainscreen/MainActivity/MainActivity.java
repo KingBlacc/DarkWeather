@@ -1,20 +1,16 @@
 package africa.younglings.carelse.mainscreen.MainActivity;
 
-import android.content.Intent;
 import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.Toast;
 
 import com.google.android.gms.common.api.Status;
 import com.google.android.libraries.places.api.Places;
 import com.google.android.libraries.places.api.model.Place;
-import com.google.android.libraries.places.widget.Autocomplete;
-import com.google.android.libraries.places.widget.AutocompleteActivity;
 import com.google.android.libraries.places.widget.AutocompleteSupportFragment;
 import com.google.android.libraries.places.widget.listener.PlaceSelectionListener;
-import com.google.android.libraries.places.widget.model.AutocompleteActivityMode;
 
 import java.util.Arrays;
 import java.util.List;
@@ -25,7 +21,8 @@ public class MainActivity extends AppCompatActivity implements IMainView{
 
     private final String GOOGLE_API_KEY ="AIzaSyCaJh5BI-mic34LOKtkYqAUM0lHoL8hLqg";
     private final static int AUTOCOMPLETE_REQUEST_CODE = 1234;
-    List<Place.Field> fields;
+    private List<Place.Field> fields;
+    private AutocompleteSupportFragment autocompleteFragment;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,30 +36,24 @@ public class MainActivity extends AppCompatActivity implements IMainView{
             Places.initialize(getApplicationContext(), GOOGLE_API_KEY);
         }
 
-        // Set the fields to specify which types of place data to return.
-        fields = Arrays.asList(Place.Field.ID, Place.Field.NAME);
+         autocompleteFragment = (AutocompleteSupportFragment)
+                                getSupportFragmentManager().
+                                findFragmentById(R.id.autocomplete_fragment);
+        fields = Arrays.asList(Place.Field.ID, Place.Field.NAME, Place.Field.LAT_LNG);
+        autocompleteFragment.setPlaceFields(fields);
 
-        // Start the autocomplete intent.
-        Intent intent = new Autocomplete.IntentBuilder(
-                AutocompleteActivityMode.FULLSCREEN, fields)
-                .build(this);
-        startActivityForResult(intent, AUTOCOMPLETE_REQUEST_CODE);
-    }
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        if (requestCode == AUTOCOMPLETE_REQUEST_CODE) {
-            if (resultCode == RESULT_OK) {
-                Place place = Autocomplete.getPlaceFromIntent(data);
-                Log.i("Data", "Place: " + place.getName() + ", " + place.getId());
-            } else if (resultCode == AutocompleteActivity.RESULT_ERROR) {
-                // TODO: Handle the error.
-                Status status = Autocomplete.getStatusFromIntent(data);
-                Log.i("Data", status.getStatusMessage());
-            } else if (resultCode == RESULT_CANCELED) {
-                // The user canceled the operation.
+        autocompleteFragment.setOnPlaceSelectedListener(new PlaceSelectionListener() {
+            @Override
+            public void onPlaceSelected(@NonNull Place place) {
+                Toast.makeText(getApplicationContext(), place.getName(), Toast.LENGTH_LONG).show();
+                Log.d("Info", place.toString());
             }
-        }
+
+            @Override
+            public void onError(@NonNull Status status) {
+                Log.d("Error", status.getStatusMessage());
+            }
+        });
     }
 
     @Override
