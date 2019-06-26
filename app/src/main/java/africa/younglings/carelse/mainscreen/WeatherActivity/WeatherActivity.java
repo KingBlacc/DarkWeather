@@ -4,6 +4,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.EditText;
 
+import com.google.android.gms.maps.model.LatLng;
+
 import africa.younglings.carelse.mainscreen.R;
 
 public class WeatherActivity extends AppCompatActivity implements IWeatherView{
@@ -16,6 +18,17 @@ public class WeatherActivity extends AppCompatActivity implements IWeatherView{
 
     @Override
     public void init() {
+
+    }
+
+    @Override
+    public void updateWeather() {
+
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
 
     }
 }
