@@ -2,39 +2,263 @@ package africa.younglings.carelse.mainscreen.DarkSkyAPI.ModelClass;
 
 public class Data
 {
+    private String windGust;
+
+    private String apparentTemperatureMinTime;
+
+    private String temperatureMax;
+
+    private String icon;
+
+    private String precipIntensityMax;
+
+    private String windBearing;
+
+    private String ozone;
+
+    private String temperatureMaxTime;
+
+    private String apparentTemperatureMin;
+
+    private String sunsetTime;
+
+    private String temperatureLow;
+
+    private String precipType;
+
+    private String humidity;
+
+    private String moonPhase;
+
+    private String windSpeed;
+
+    private String apparentTemperatureLowTime;
+
+    private String sunriseTime;
+
+    private String apparentTemperatureLow;
+
     private String summary;
 
     private String precipProbability;
 
-    private String visibility;
+    private String temperatureHighTime;
 
-    private String windGust;
+    private String visibility;
 
     private String precipIntensity;
 
-    private String icon;
-
     private String cloudCover;
 
-    private String windBearing;
+    private String temperatureMin;
 
-    private String apparentTemperature;
+    private String apparentTemperatureHighTime;
 
     private String pressure;
 
     private String dewPoint;
 
-    private String ozone;
+    private String temperatureMinTime;
 
-    private String temperature;
+    private String uvIndexTime;
 
-    private String humidity;
+    private String apparentTemperatureMax;
 
-    private String time;
+    private String temperatureHigh;
 
-    private String windSpeed;
+    private String temperatureLowTime;
+
+    private String apparentTemperatureHigh;
+
+    private long time;
+
+    private String precipIntensityMaxTime;
+
+    private String windGustTime;
 
     private String uvIndex;
+
+    private String apparentTemperatureMaxTime;
+
+    public String getWindGust ()
+    {
+        return windGust;
+    }
+
+    public void setWindGust (String windGust)
+    {
+        this.windGust = windGust;
+    }
+
+    public String getApparentTemperatureMinTime ()
+    {
+        return apparentTemperatureMinTime;
+    }
+
+    public void setApparentTemperatureMinTime (String apparentTemperatureMinTime)
+    {
+        this.apparentTemperatureMinTime = apparentTemperatureMinTime;
+    }
+
+    public String getTemperatureMax ()
+    {
+        return temperatureMax;
+    }
+
+    public void setTemperatureMax (String temperatureMax)
+    {
+        this.temperatureMax = temperatureMax;
+    }
+
+    public String getIcon ()
+    {
+        return icon;
+    }
+
+    public void setIcon (String icon)
+    {
+        this.icon = icon;
+    }
+
+    public String getPrecipIntensityMax ()
+    {
+        return precipIntensityMax;
+    }
+
+    public void setPrecipIntensityMax (String precipIntensityMax)
+    {
+        this.precipIntensityMax = precipIntensityMax;
+    }
+
+    public String getWindBearing ()
+    {
+        return windBearing;
+    }
+
+    public void setWindBearing (String windBearing)
+    {
+        this.windBearing = windBearing;
+    }
+
+    public String getOzone ()
+    {
+        return ozone;
+    }
+
+    public void setOzone (String ozone)
+    {
+        this.ozone = ozone;
+    }
+
+    public String getTemperatureMaxTime ()
+    {
+        return temperatureMaxTime;
+    }
+
+    public void setTemperatureMaxTime (String temperatureMaxTime)
+    {
+        this.temperatureMaxTime = temperatureMaxTime;
+    }
+
+    public String getApparentTemperatureMin ()
+    {
+        return apparentTemperatureMin;
+    }
+
+    public void setApparentTemperatureMin (String apparentTemperatureMin)
+    {
+        this.apparentTemperatureMin = apparentTemperatureMin;
+    }
+
+    public String getSunsetTime ()
+    {
+        return sunsetTime;
+    }
+
+    public void setSunsetTime (String sunsetTime)
+    {
+        this.sunsetTime = sunsetTime;
+    }
+
+    public String getTemperatureLow ()
+    {
+        return temperatureLow;
+    }
+
+    public void setTemperatureLow (String temperatureLow)
+    {
+        this.temperatureLow = temperatureLow;
+    }
+
+    public String getPrecipType ()
+    {
+        return precipType;
+    }
+
+    public void setPrecipType (String precipType)
+    {
+        this.precipType = precipType;
+    }
+
+    public String getHumidity ()
+    {
+        return humidity;
+    }
+
+    public void setHumidity (String humidity)
+    {
+        this.humidity = humidity;
+    }
+
+    public String getMoonPhase ()
+    {
+        return moonPhase;
+    }
+
+    public void setMoonPhase (String moonPhase)
+    {
+        this.moonPhase = moonPhase;
+    }
+
+    public String getWindSpeed ()
+    {
+        return windSpeed;
+    }
+
+    public void setWindSpeed (String windSpeed)
+    {
+        this.windSpeed = windSpeed;
+    }
+
+    public String getApparentTemperatureLowTime ()
+    {
+        return apparentTemperatureLowTime;
+    }
+
+    public void setApparentTemperatureLowTime (String apparentTemperatureLowTime)
+    {
+        this.apparentTemperatureLowTime = apparentTemperatureLowTime;
+    }
+
+    public String getSunriseTime ()
+    {
+        return sunriseTime;
+    }
+
+    public void setSunriseTime (String sunriseTime)
+    {
+        this.sunriseTime = sunriseTime;
+    }
+
+    public String getApparentTemperatureLow ()
+    {
+        return apparentTemperatureLow;
+    }
+
+    public void setApparentTemperatureLow (String apparentTemperatureLow)
+    {
+        this.apparentTemperatureLow = apparentTemperatureLow;
+    }
 
     public String getSummary ()
     {
@@ -56,6 +280,16 @@ public class Data
         this.precipProbability = precipProbability;
     }
 
+    public String getTemperatureHighTime ()
+    {
+        return temperatureHighTime;
+    }
+
+    public void setTemperatureHighTime (String temperatureHighTime)
+    {
+        this.temperatureHighTime = temperatureHighTime;
+    }
+
     public String getVisibility ()
     {
         return visibility;
@@ -64,16 +298,6 @@ public class Data
     public void setVisibility (String visibility)
     {
         this.visibility = visibility;
-    }
-
-    public String getWindGust ()
-    {
-        return windGust;
-    }
-
-    public void setWindGust (String windGust)
-    {
-        this.windGust = windGust;
     }
 
     public String getPrecipIntensity ()
@@ -86,16 +310,6 @@ public class Data
         this.precipIntensity = precipIntensity;
     }
 
-    public String getIcon ()
-    {
-        return icon;
-    }
-
-    public void setIcon (String icon)
-    {
-        this.icon = icon;
-    }
-
     public String getCloudCover ()
     {
         return cloudCover;
@@ -106,24 +320,24 @@ public class Data
         this.cloudCover = cloudCover;
     }
 
-    public String getWindBearing ()
+    public String getTemperatureMin ()
     {
-        return windBearing;
+        return temperatureMin;
     }
 
-    public void setWindBearing (String windBearing)
+    public void setTemperatureMin (String temperatureMin)
     {
-        this.windBearing = windBearing;
+        this.temperatureMin = temperatureMin;
     }
 
-    public String getApparentTemperature ()
+    public String getApparentTemperatureHighTime ()
     {
-        return apparentTemperature;
+        return apparentTemperatureHighTime;
     }
 
-    public void setApparentTemperature (String apparentTemperature)
+    public void setApparentTemperatureHighTime (String apparentTemperatureHighTime)
     {
-        this.apparentTemperature = apparentTemperature;
+        this.apparentTemperatureHighTime = apparentTemperatureHighTime;
     }
 
     public String getPressure ()
@@ -146,54 +360,94 @@ public class Data
         this.dewPoint = dewPoint;
     }
 
-    public String getOzone ()
+    public String getTemperatureMinTime ()
     {
-        return ozone;
+        return temperatureMinTime;
     }
 
-    public void setOzone (String ozone)
+    public void setTemperatureMinTime (String temperatureMinTime)
     {
-        this.ozone = ozone;
+        this.temperatureMinTime = temperatureMinTime;
     }
 
-    public String getTemperature ()
+    public String getUvIndexTime ()
     {
-        return temperature;
+        return uvIndexTime;
     }
 
-    public void setTemperature (String temperature)
+    public void setUvIndexTime (String uvIndexTime)
     {
-        this.temperature = temperature;
+        this.uvIndexTime = uvIndexTime;
     }
 
-    public String getHumidity ()
+    public String getApparentTemperatureMax ()
     {
-        return humidity;
+        return apparentTemperatureMax;
     }
 
-    public void setHumidity (String humidity)
+    public void setApparentTemperatureMax (String apparentTemperatureMax)
     {
-        this.humidity = humidity;
+        this.apparentTemperatureMax = apparentTemperatureMax;
     }
 
-    public String getTime ()
+    public String getTemperatureHigh ()
+    {
+        return temperatureHigh;
+    }
+
+    public void setTemperatureHigh (String temperatureHigh)
+    {
+        this.temperatureHigh = temperatureHigh;
+    }
+
+    public String getTemperatureLowTime ()
+    {
+        return temperatureLowTime;
+    }
+
+    public void setTemperatureLowTime (String temperatureLowTime)
+    {
+        this.temperatureLowTime = temperatureLowTime;
+    }
+
+    public String getApparentTemperatureHigh ()
+    {
+        return apparentTemperatureHigh;
+    }
+
+    public void setApparentTemperatureHigh (String apparentTemperatureHigh)
+    {
+        this.apparentTemperatureHigh = apparentTemperatureHigh;
+    }
+
+    public long getTime ()
     {
         return time;
     }
 
-    public void setTime (String time)
+    public void setTime (long time)
     {
         this.time = time;
     }
 
-    public String getWindSpeed ()
+    public String getPrecipIntensityMaxTime ()
     {
-        return windSpeed;
+        return precipIntensityMaxTime;
     }
 
-    public void setWindSpeed (String windSpeed)
+    public void setPrecipIntensityMaxTime (String precipIntensityMaxTime)
     {
-        this.windSpeed = windSpeed;
+        this.precipIntensityMaxTime = precipIntensityMaxTime;
+    }
+
+    public String getWindGustTime ()
+    {
+        return windGustTime;
+    }
+
+    public void setWindGustTime (String windGustTime)
+    {
+        this.windGustTime = windGustTime;
     }
 
     public String getUvIndex ()
@@ -206,9 +460,19 @@ public class Data
         this.uvIndex = uvIndex;
     }
 
+    public String getApparentTemperatureMaxTime ()
+    {
+        return apparentTemperatureMaxTime;
+    }
+
+    public void setApparentTemperatureMaxTime (String apparentTemperatureMaxTime)
+    {
+        this.apparentTemperatureMaxTime = apparentTemperatureMaxTime;
+    }
+
     @Override
     public String toString()
     {
-        return "ClassPojo [summary = "+summary+", precipProbability = "+precipProbability+", visibility = "+visibility+", windGust = "+windGust+", precipIntensity = "+precipIntensity+", icon = "+icon+", cloudCover = "+cloudCover+", windBearing = "+windBearing+", apparentTemperature = "+apparentTemperature+", pressure = "+pressure+", dewPoint = "+dewPoint+", ozone = "+ozone+", temperature = "+temperature+", humidity = "+humidity+", time = "+time+", windSpeed = "+windSpeed+", uvIndex = "+uvIndex+"]";
+        return "ClassPojo [windGust = "+windGust+", apparentTemperatureMinTime = "+apparentTemperatureMinTime+", temperatureMax = "+temperatureMax+", icon = "+icon+", precipIntensityMax = "+precipIntensityMax+", windBearing = "+windBearing+", ozone = "+ozone+", temperatureMaxTime = "+temperatureMaxTime+", apparentTemperatureMin = "+apparentTemperatureMin+", sunsetTime = "+sunsetTime+", temperatureLow = "+temperatureLow+", precipType = "+precipType+", humidity = "+humidity+", moonPhase = "+moonPhase+", windSpeed = "+windSpeed+", apparentTemperatureLowTime = "+apparentTemperatureLowTime+", sunriseTime = "+sunriseTime+", apparentTemperatureLow = "+apparentTemperatureLow+", summary = "+summary+", precipProbability = "+precipProbability+", temperatureHighTime = "+temperatureHighTime+", visibility = "+visibility+", precipIntensity = "+precipIntensity+", cloudCover = "+cloudCover+", temperatureMin = "+temperatureMin+", apparentTemperatureHighTime = "+apparentTemperatureHighTime+", pressure = "+pressure+", dewPoint = "+dewPoint+", temperatureMinTime = "+temperatureMinTime+", uvIndexTime = "+uvIndexTime+", apparentTemperatureMax = "+apparentTemperatureMax+", temperatureHigh = "+temperatureHigh+", temperatureLowTime = "+temperatureLowTime+", apparentTemperatureHigh = "+apparentTemperatureHigh+", time = "+time+", precipIntensityMaxTime = "+precipIntensityMaxTime+", windGustTime = "+windGustTime+", uvIndex = "+uvIndex+", apparentTemperatureMaxTime = "+apparentTemperatureMaxTime+"]";
     }
 }

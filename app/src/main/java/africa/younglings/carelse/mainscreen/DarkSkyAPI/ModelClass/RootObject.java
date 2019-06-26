@@ -12,6 +12,8 @@ public class RootObject
 
     private Daily daily;
 
+    private Flags flags;
+
     private Hourly hourly;
 
     private String longitude;
@@ -66,6 +68,16 @@ public class RootObject
         this.daily = daily;
     }
 
+    public Flags getFlags ()
+    {
+        return flags;
+    }
+
+    public void setFlags (Flags flags)
+    {
+        this.flags = flags;
+    }
+
     public Hourly getHourly ()
     {
         return hourly;
@@ -89,6 +101,6 @@ public class RootObject
     @Override
     public String toString()
     {
-        return "ClassPojo [currently = "+currently+", offset = "+offset+", timezone = "+timezone+", latitude = "+latitude+", daily = "+daily+", hourly = "+hourly+", longitude = "+longitude+"]";
+        return "ClassPojo [currently = "+currently+", offset = "+offset+", timezone = "+timezone+", latitude = "+latitude+", daily = "+daily+", flags = "+flags+", hourly = "+hourly+", longitude = "+longitude+"]";
     }
 }

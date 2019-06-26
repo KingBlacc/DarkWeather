@@ -11,6 +11,7 @@ import android.widget.Toast;
 import com.google.android.gms.common.api.Status;
 import com.google.android.libraries.places.api.Places;
 import com.google.android.libraries.places.api.model.Place;
+import com.google.android.libraries.places.api.model.TypeFilter;
 import com.google.android.libraries.places.widget.AutocompleteSupportFragment;
 import com.google.android.libraries.places.widget.listener.PlaceSelectionListener;
 import com.google.gson.Gson;
@@ -51,7 +52,7 @@ public class MainActivity extends AppCompatActivity implements IMainView{
                                 findFragmentById(R.id.autocomplete_fragment);
         fields = Arrays.asList(Place.Field.ID, Place.Field.NAME, Place.Field.LAT_LNG);
         autocompleteFragment.setPlaceFields(fields);
-
+        autocompleteFragment.setTypeFilter(TypeFilter.CITIES);
         autocompleteFragment.setOnPlaceSelectedListener(new PlaceSelectionListener() {
             @Override
             public void onPlaceSelected(@NonNull Place place) {

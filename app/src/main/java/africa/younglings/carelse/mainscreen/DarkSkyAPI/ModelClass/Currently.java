@@ -26,11 +26,15 @@ public class Currently
 
     private String ozone;
 
+    private String nearestStormDistance;
+
+    private String precipType;
+
     private String temperature;
 
     private String humidity;
 
-    private String time;
+    private long time;
 
     private String windSpeed;
 
@@ -156,6 +160,26 @@ public class Currently
         this.ozone = ozone;
     }
 
+    public String getNearestStormDistance ()
+    {
+        return nearestStormDistance;
+    }
+
+    public void setNearestStormDistance (String nearestStormDistance)
+    {
+        this.nearestStormDistance = nearestStormDistance;
+    }
+
+    public String getPrecipType ()
+    {
+        return precipType;
+    }
+
+    public void setPrecipType (String precipType)
+    {
+        this.precipType = precipType;
+    }
+
     public String getTemperature ()
     {
         return temperature;
@@ -176,12 +200,12 @@ public class Currently
         this.humidity = humidity;
     }
 
-    public String getTime ()
+    public long getTime ()
     {
         return time;
     }
 
-    public void setTime (String time)
+    public void setTime (long time)
     {
         this.time = time;
     }
@@ -209,6 +233,6 @@ public class Currently
     @Override
     public String toString()
     {
-        return "ClassPojo [summary = "+summary+", precipProbability = "+precipProbability+", visibility = "+visibility+", windGust = "+windGust+", precipIntensity = "+precipIntensity+", icon = "+icon+", cloudCover = "+cloudCover+", windBearing = "+windBearing+", apparentTemperature = "+apparentTemperature+", pressure = "+pressure+", dewPoint = "+dewPoint+", ozone = "+ozone+", temperature = "+temperature+", humidity = "+humidity+", time = "+time+", windSpeed = "+windSpeed+", uvIndex = "+uvIndex+"]";
+        return "ClassPojo [summary = "+summary+", precipProbability = "+precipProbability+", visibility = "+visibility+", windGust = "+windGust+", precipIntensity = "+precipIntensity+", icon = "+icon+", cloudCover = "+cloudCover+", windBearing = "+windBearing+", apparentTemperature = "+apparentTemperature+", pressure = "+pressure+", dewPoint = "+dewPoint+", ozone = "+ozone+", nearestStormDistance = "+nearestStormDistance+", precipType = "+precipType+", temperature = "+temperature+", humidity = "+humidity+", time = "+time+", windSpeed = "+windSpeed+", uvIndex = "+uvIndex+"]";
     }
 }
