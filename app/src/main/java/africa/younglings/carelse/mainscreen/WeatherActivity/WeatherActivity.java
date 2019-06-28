@@ -70,7 +70,7 @@ public class WeatherActivity extends AppCompatActivity implements IWeatherView{
         layoutWeather = findViewById(R.id.layoutWeather);
         layoutRain = findViewById(R.id.layoutRain);
         tvLocation = findViewById(R.id.tvLocation);
-        tvTime = findViewById(R.id.tvTime);
+        tvTime = findViewById(R.id.tvCurrentTime);
         tvTemperature = findViewById(R.id.tvTemperature);
         weatherIcon = findViewById(R.id.weatherIcon);
         tvConditions = findViewById(R.id.tvConditions);
@@ -123,7 +123,7 @@ public class WeatherActivity extends AppCompatActivity implements IWeatherView{
             tvWindConditions.setText(DoubletoInt(Double.parseDouble(currentWeather.getWindSpeed())));
             tvHumidityConditions.setText(convertToPercentage(Double.parseDouble(currentWeather.getHumidity())));
             Date date = new Date(currentWeather.getTime() * 1000);
-            tvTime.setText(convertDate(date));
+            convertDate(date);
         }catch(Exception e){
             Log.d("Error", e.getMessage());
         }
@@ -145,10 +145,10 @@ public class WeatherActivity extends AppCompatActivity implements IWeatherView{
         return String.valueOf(newNum);
     }
 
-    public String convertDate(Date date){
-        DateFormat dateFormat = new SimpleDateFormat("EEE, d MMM yy, HH:mm");
+    public void convertDate(Date date){
+        DateFormat dateFormat = new SimpleDateFormat("EEE, d MMM yyyy HH:mm");
 //        Date date = new Date(time * 1000);
-        return dateFormat.format(date);
+        tvTime.setText(dateFormat.format(date));
     }
 
     private String convertLocation(LatLng latLng){

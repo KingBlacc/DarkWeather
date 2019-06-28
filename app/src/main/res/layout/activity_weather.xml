@@ -32,7 +32,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/tvTime"
+                android:id="@+id/tvCurrentTime"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="29dp"
@@ -54,7 +54,7 @@
                 android:textSize="48sp"
                 android:textStyle="bold"
                 app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvTime" />
+                app:layout_constraintTop_toBottomOf="@id/tvCurrentTime" />
 
             <LinearLayout
                 android:id="@+id/layoutConditions"
