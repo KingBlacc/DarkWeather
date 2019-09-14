@@ -4,5 +4,6 @@ public interface IWeatherView {
 
     void init();
     void updateWeather();
+    void cacheData();
 
 }

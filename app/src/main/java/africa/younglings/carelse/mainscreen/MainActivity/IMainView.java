@@ -7,4 +7,5 @@ public interface IMainView {
     void init();
     void showError(String message);
     void switchActivity(RootObject rootObject);
+    void checkCached();
 }

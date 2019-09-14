@@ -13,7 +13,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class DarkSkyPresenter implements IDarkSkyPresenter {
 
     IMainView view;
-    private final String DARK_SKY_KEY = "f0c4fdeec618a4da3c0adc2702cc73bf";
+    private final String DARK_SKY_KEY = "enter your dark sky api key here";
     @Override
     public void getForecast(LatLng latLng) {
         Retrofit retrofit = new Retrofit.Builder()

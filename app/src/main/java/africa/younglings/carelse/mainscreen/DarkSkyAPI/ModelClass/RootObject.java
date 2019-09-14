@@ -23,6 +23,7 @@ public class RootObject
         return currently;
     }
 
+
     public void setCurrently (Currently currently)
     {
         this.currently = currently;

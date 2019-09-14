@@ -1,6 +1,7 @@
 package africa.younglings.carelse.mainscreen.WeatherActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
@@ -57,6 +58,8 @@ public class WeatherActivity extends AppCompatActivity implements IWeatherView{
 
     //Variables
     private String location;
+    private final String SHARED_PREFERENCE = "SHARED_PREFS";
+    private final String CACHED_DATA = "CACHED_DATA";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -124,6 +127,7 @@ public class WeatherActivity extends AppCompatActivity implements IWeatherView{
             tvHumidityConditions.setText(convertToPercentage(Double.parseDouble(currentWeather.getHumidity())));
             Date date = new Date(currentWeather.getTime() * 1000);
             convertDate(date);
+            cacheData();
         }catch(Exception e){
             Log.d("Error", e.getMessage());
         }
@@ -163,6 +167,15 @@ public class WeatherActivity extends AppCompatActivity implements IWeatherView{
         String finalString = cityName+", "+ addresses.get(0).getCountryCode();
         this.location = finalString;
         return finalString;
+    }
+
+    @Override
+    public void cacheData() {
+        SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFERENCE, MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        Gson gson = new Gson();
+        editor.putString(CACHED_DATA, gson.toJson(rootObject));
+        editor.apply();
     }
 
     @Override

@@ -7,4 +7,5 @@
     <color name="darkText">#2E3442</color>
     <color name="gradientStart">#BDC3C7</color>
     <color name="gradientEnd">#2C3E50</color>
+    <color name="background">#2E3442</color>
 </resources>
