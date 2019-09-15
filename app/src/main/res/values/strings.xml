@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Weather Droid</string>
-    <string name="DARK_SKY_API_KEY"></string>
-    <string name="APP_CENTER_SECRET_KEY"></string>
-    <string name="GOOGLE_API_KEY"></string>
+    <string name="DARK_SKY_API_KEY">13dfcd1ff654db72064a6ea6ee84a71f</string>
+    <string name="APP_CENTER_SECRET_KEY">78759a72-e56c-4814-af11-f7ac81e6638f</string>
+    <string name="GOOGLE_API_KEY">AIzaSyCaJh5BI-mic34LOKtkYqAUM0lHoL8hLqg</string>
 </resources>

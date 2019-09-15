@@ -37,7 +37,7 @@ import africa.younglings.carelse.mainscreen.WeatherActivity.WeatherActivity;
 
 public class MainActivity extends AppCompatActivity implements IMainView{
 
-    private final String GOOGLE_API_KEY ="Enter your google api key";
+    private final String GOOGLE_API_KEY ="AIzaSyCaJh5BI-mic34LOKtkYqAUM0lHoL8hLqg";
     private List<Place.Field> fields;
     private AutocompleteSupportFragment autocompleteFragment;
     private IDarkSkyPresenter presenter;
@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity implements IMainView{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        AppCenter.start(getApplication(), "enter app center secret key",
+        AppCenter.start(getApplication(), "78759a72-e56c-4814-af11-f7ac81e6638f",
                 Analytics.class, Crashes.class);
         init();
     }
@@ -103,7 +103,6 @@ public class MainActivity extends AppCompatActivity implements IMainView{
         Gson gson = new Gson();
         SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFERENCE, MODE_PRIVATE);
         RootObject object = gson.fromJson(sharedPreferences.getString(CACHED_DATA, null), RootObject.class);
-        Log.d("cached", object.toString());
         if (object.getCurrently().getApparentTemperature() != null){
             cardView.setVisibility(View.VISIBLE);
             tvHistory.setVisibility(View.VISIBLE);
